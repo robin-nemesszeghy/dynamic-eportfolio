@@ -9,7 +9,18 @@
       src="https://kit.fontawesome.com/2e2a207e73.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="./script.js" defer></script> -->
+    <script src="./script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "vyCv0toT_w8iaKlPu",
+        });
+      })();
+    </script>
   </head>
   <body>
     <section id="landing-page">
@@ -90,6 +101,122 @@
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__subtitle modal__subtitle--about">
+            Frontend Software Engineer.
+          </h4>
+          <p class="modal__para">
+            I'm a <b class="orange">frontend software engineer</b> with a strong
+            passion for developing websites with great
+            <b class="orange">user experiences.</b>
+            <br />
+            I currently work on extremely difficult engineering problems and
+            learn from a team consisting of some of the most
+            <b class="orange">talented</b> and
+            <b class="orange">experienced</b> software engineers.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt="HTML Badge"
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt="CSS Badge"
+              />
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt="JavaScript Badge"
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png"
+                alt="TypeScript Badge"
+              />
+              <span class="language__name">TypeScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png"
+                alt="Vue Badge"
+              />
+              <span class="language__name">Vue</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/nuxt-dot-js-3628959-3030184.png"
+                alt="Nuxt Badge"
+              />
+              <span class="language__name">Nuxt</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt="React Badge"
+              />
+              <span class="language__name">React</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://mobx.js.org/img/mobx.png"
+                alt="MobX Badge"
+              />
+              <span class="language__name">MobX</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h4 class="modal__subtitle modal__subtitle--contact">
+            I'm currently open to new opportunities.
+          </h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with you soon.
+          </div>
+        </div>
+        <i class="fa-solid fa-xmark modal__exit click"></i>
+      </div>
     </section>
 
     <section id="projects">
@@ -99,6 +226,82 @@
             Here are some of my <span>projects</span>
           </h1>
           <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  class="project__img"
+                  src="./assets/lrbp-books.png"
+                  alt="Project 1"
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">LRBP Books</h3>
+                  <h4 class="project__description--subtitle">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Built an author website targeted to readers of suspense
+                    adventure thrillers with a speculative twist (including both
+                    sci-fi and fantasy). The website showcases both featured
+                    books and new releases, as well as any discounted prices.
+                    The links take the user to the appropriate Amazon
+                    marketplace in line with their location.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      class="project__description--link"
+                      href="https://github.com/robin-nemesszeghy/lrbp-books"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                    <a
+                      class="project__description--link"
+                      href="https://robin-nemesszeghy.github.io/lrbp-books/"
+                      target="_blank"
+                      ><i class="fa-solid fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  class="project__img"
+                  src="./assets/lrbp-books.png"
+                  alt="Project 1"
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">LRBP Books</h3>
+                  <h4 class="project__description--subtitle">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Built an author website targeted to readers of suspense
+                    adventure thrillers with a speculative twist (including both
+                    sci-fi and fantasy). The website showcases both featured
+                    books and new releases, as well as any discounted prices.
+                    The links take the user to the appropriate Amazon
+                    marketplace in line with their location.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      class="project__description--link"
+                      href="https://github.com/robin-nemesszeghy/lrbp-books"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                    <a
+                      class="project__description--link"
+                      href="https://robin-nemesszeghy.github.io/lrbp-books/"
+                      target="_blank"
+                      ><i class="fa-solid fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </li>
             <li class="project">
               <div class="project__wrapper">
                 <img
