@@ -137,6 +137,8 @@ nav,
   opacity: 1;
   visibility: visible;
   transition: all 600ms 800ms;
+  position: relative;
+  z-index: 1;
 }
 
 .modal--open nav,
